@@ -12,9 +12,21 @@ import {
   TextField,
   Typography
 } from '@material-ui/core';
+import { firebaseCreateUser } from '../utils/FirebaseUtil';
 
 const Register = () => {
   const navigate = useNavigate();
+
+  const registerUser = async user => {
+    let response = await firebaseCreateUser(user.email, user.password);
+    if(response === true){
+      alert("El usuario se registró con éxito.");
+      navigate('/login', { replace: true });
+    }else{
+      alert("Error: "+response);
+    }
+
+  }
 
   return (
     <>
@@ -48,8 +60,8 @@ const Register = () => {
               policy: Yup.boolean().oneOf([true], 'This field must be checked')
             })
           }
-            onSubmit={() => {
-              navigate('/app/dashboard', { replace: true });
+            onSubmit={(user) => {
+              registerUser(user);
             }}
           >
             {({
@@ -164,7 +176,6 @@ const Register = () => {
                 <Box sx={{ py: 2 }}>
                   <Button
                     color="primary"
-                    disabled={isSubmitting}
                     fullWidth
                     size="large"
                     type="submit"

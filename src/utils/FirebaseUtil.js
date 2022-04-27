@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -40,4 +41,16 @@ export async function firebaseLogin(email, password) {
     return false;
   }
   return true;
+}
+
+export async function firebaseFind(collectionName){
+  let clients = [];
+  let query = collection(getFirestore(), collectionName);
+  let results = await getDocs(query);
+  results.forEach(document => {
+    let object = document.data();
+    object.id = document.id;
+    clients.push(object);
+  });
+  return clients;
 }

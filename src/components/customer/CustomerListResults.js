@@ -4,7 +4,7 @@ import moment from 'moment';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import {
   Avatar,
-  Box,
+  Box, Button,
   Card,
   Checkbox,
   Table,
@@ -16,6 +16,7 @@ import {
   Typography
 } from '@material-ui/core';
 import getInitials from '../../utils/getInitials';
+import { firebaseDelete } from '../../utils/FirebaseUtil';
 
 const CustomerListResults = ({ customers, ...rest }) => {
   const [selectedCustomerIds, setSelectedCustomerIds] = useState([]);
@@ -60,6 +61,10 @@ const CustomerListResults = ({ customers, ...rest }) => {
 
   const handlePageChange = (event, newPage) => {
     setPage(newPage);
+  };
+
+  const deleteClient = async (clientId) => {
+    await firebaseDelete("client", clientId);
   };
 
   return (
@@ -131,6 +136,22 @@ const CustomerListResults = ({ customers, ...rest }) => {
                   </TableCell>
                   <TableCell>
                     {customer.phone}
+                  </TableCell>
+                  <TableCell>
+                    <Button
+                      onClick={() => {
+                        deleteClient(customer.id).then(
+                          function(){
+                            alert("Client deleted successfully: ");
+                            window.location.reload(true);
+                          }
+                        )
+                      }}
+                      color="error"
+                      variant="contained"
+                    >
+                      Delete
+                    </Button>
                   </TableCell>
                 </TableRow>
               ))}

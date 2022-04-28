@@ -12,8 +12,8 @@ import * as Yup from 'yup';
 const NewCustomer = () => {
   const navigate = useNavigate();
 
-  const createClient = async (cliente) => {
-    await firebaseSave('client', cliente);
+  const createClient = async (client) => {
+    await firebaseSave('client', client);
     navigate('/app/customers', { replace: true });
   }
 

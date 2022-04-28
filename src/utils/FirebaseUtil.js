@@ -61,3 +61,7 @@ export async function firebaseSave(collection, object){
   let ref = doc(getFirestore(), collection, object.id);
   setDoc(ref, object);
 }
+
+export async function firebaseDelete(collection, id) {
+  await deleteDoc(doc(getFirestore(), collection, id));
+}

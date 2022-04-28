@@ -116,13 +116,13 @@ const CustomerListResults = ({ customers, ...rest }) => {
                         src={customer.avatarUrl}
                         sx={{ mr: 2 }}
                       >
-                        {getInitials(customer.name)}
+                        {getInitials(customer.firstName)}
                       </Avatar>
                       <Typography
                         color="textPrimary"
                         variant="body1"
                       >
-                        {customer.lastname}, {customer.name}
+                        {customer.lastName}, {customer.firstName}
                       </Typography>
                     </Box>
                   </TableCell>

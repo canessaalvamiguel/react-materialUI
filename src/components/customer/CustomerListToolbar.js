@@ -2,28 +2,28 @@ import {
   Box,
   Button,
   Card,
-  CardContent,
-  TextField,
-  InputAdornment,
-  SvgIcon
+  CardContent, InputAdornment,
+  SvgIcon, TextField
 } from '@material-ui/core';
 import { Search as SearchIcon } from 'react-feather';
+import { useNavigate } from 'react-router';
 
-const CustomerListToolbar = (props) => (
-  <Box {...props}>
+const CustomerListToolbar = (props) => {
+
+  const navigate = useNavigate();
+
+  return <Box {...props}>
     <Box
       sx={{
         display: 'flex',
         justifyContent: 'flex-end'
       }}
     >
-      <Button>
-        Import
-      </Button>
-      <Button sx={{ mx: 1 }}>
-        Export
-      </Button>
+
       <Button
+        onClick={() => {
+          navigate('/app/customer-new', { replace: true });
+        }}
         color="primary"
         variant="contained"
       >
@@ -56,6 +56,6 @@ const CustomerListToolbar = (props) => (
       </Card>
     </Box>
   </Box>
-);
+}
 
 export default CustomerListToolbar;

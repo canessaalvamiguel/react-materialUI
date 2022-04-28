@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc } from "firebase/firestore";
+import { uuid } from 'uuidv4';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -53,4 +54,10 @@ export async function firebaseFind(collectionName){
     clients.push(object);
   });
   return clients;
+}
+
+export async function firebaseSave(collection, object){
+  object.id = uuid();
+  let ref = doc(getFirestore(), collection, object.id);
+  setDoc(ref, object);
 }

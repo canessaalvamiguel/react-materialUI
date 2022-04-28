@@ -1,8 +1,34 @@
-## [Material Kit - React](https://material-kit-react.devias.io/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=%F0%9F%9A%A8Devias%20Freebie%20Alert%20-%20An%20awesome%20ready-to-use%20register%20page%20made%20with%20%23material%20%23react%0D%0Ahttps%3A%2F%2Fdevias.io%20%23createreactapp%20%23devias%20%23material%20%23freebie%20%40devias-io)
+# React Client app using Material Kit UI from 
 
-![license](https://img.shields.io/badge/license-MIT-blue.svg)
+This frontend project is an exercise to learn ReactJS, this manage clients (allow sign up and log in, but also allow creating and delete customers) from a Firebase source
+It uses hooks
 
-[![Material Kit - React](https://s3.eu-west-2.amazonaws.com/devias/products/react-material-dashboard/react-material-free-xl.jpg)](https://react-material-dashboard.devias.io/)
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+#Material Kit - React
 
 > Free React Admin Dashboard made with [Material UI's](https://material-ui.com/?ref=devias-io) components, [React](https://reactjs.org/?ref=devias-io) and of course [create-react-app](https://facebook.github.io/create-react-app/?ref=devias-io) to boost your app development process! We'll launch a pro version soon, so if you are interested subscribe to our personal emailing list on [https://devias.io/](https://devias.io/)
 
@@ -15,10 +41,10 @@ We also have a pro version of this product which bundles even more pages and com
 | ------------------------ | :----------------------------------------------------------- |
 | **7** Demo Pages         | **32** demo pages
 | -                        | ✔ Dark & light mode
-| -                        | ✔ Authentication with *Amplify**, **Auth0** and **Firebase**  
-| -                        | ✔ TypeScript version                                                                                   
-| -                        | ✔ Design files (sketch & figma) - for extended license       
-| -                        | ✔ Complete users flows                                       
+| -                        | ✔ Authentication with *Amplify**, **Auth0** and **Firebase**
+| -                        | ✔ TypeScript version
+| -                        | ✔ Design files (sketch & figma) - for extended license
+| -                        | ✔ Complete users flows
 
 ## Demo
 
@@ -29,80 +55,3 @@ We also have a pro version of this product which bundles even more pages and com
 - [Login Page](https://material-kit-react.devias.io/login)
 - [Account Page](https://material-kit-react.devias.io/app/account)
 - [Settings Page](https://material-kit-react.devias.io/app/settings)
-
-
-## Quick start
-
-- [Download from Github](https://github.com/devias-io/material-kit-react/archive/master.zip) or [Download from Devias](https://devias.io/products/material-kit-react) or clone the repo: `git clone https://github.com/devias-io/material-kit-react.git`
-
-- Make sure your NodeJS and npm versions are up to date for `React 17`
-
-- Install dependencies: `npm install` or `yarn`
-
-- Start the server: `npm run start` or `yarn start`
-
-- Views are on: `localhost:3000`
-
-## 🖌 Design Files
-
-👉[Download Sketch file](https://s3.eu-west-2.amazonaws.com/devias/products/react-material-dashboard/react-material-dashboard-free.sketch)
-
-👉[Download Figma file](https://devias.s3.eu-west-2.amazonaws.com/products/react-material-dashboard/react-material-dashboard-free.fig)
-
-## File Structure
-
-Within the download you'll find the following directories and files:
-
-```
-material-react-dashboard
-
-├── .eslintrc
-├── .gitignore
-├── .prettierrc
-├── CHANGELOG.md
-├── jsconfig.json
-├── LICENSE.md
-├── package.json
-├── README.md
-├── public
-├── docs
-└── src
-	├── assets
-	├── common
-	├── components
-	├── helpers
-	├── icons
-	├── layouts
-	├── theme
-	├── views
-	│	├── Account
-	│	├── Dashboard
-	│	├── Icons
-	│	├── NotFound
-	│	├── ProductList
-	│	├── Settings
-	│	├── SignIn
-	│	├── SignUp
-	│	├── Typography
-	│	└── UserList
-	├── App.jsx
-	├── index.jsx
-	└── Routes.jsx
-```
-
-## Resources
-
-- More freebies like this one: <https://devias.io>
-
-## Reporting Issues:
-
-- [Github Issues Page](https://github.com/devias-io/react-material-dashboard/issues?ref=devias-io)
-
-## License
-
-- Licensed under MIT (https://github.com/devias-io/react-material-dashboard/blob/master/LICENSE.md)
-
-## Contact Us
-
-- Email Us: support@deviasio.zendesk.com
-- [Follow us on Instagram](https://www.instagram.com/deviasio/)
